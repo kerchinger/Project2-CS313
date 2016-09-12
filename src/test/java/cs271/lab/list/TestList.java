@@ -42,9 +42,9 @@ public class TestList {
 	public void testSizeNonEmpty() {
 		// Tododone  fix the expected values in the assertions below
 		list.add(77);
-		assertEquals(false, list.isEmpty()); // change value to false from true
-		assertEquals(1, list.size()); // change value to 1 from 0
-		assertEquals(77, list.get(0).intValue()); // change value to 77 from 0
+		assertEquals(false, list.isEmpty());
+		assertEquals(1, list.size());
+		assertEquals(77, list.get(0).intValue());
 	}
 
 	@Test
@@ -52,7 +52,8 @@ public class TestList {
 		// TODO write assertions using
 		// list.contains(77)
 		// that hold before and after adding 77 to the list
-		fail("Not yet implemented"); // remove this line when done
+		list.add(77);
+		assertEquals(true , list.contains(77));
 	}
 
 	@Test
@@ -121,7 +122,14 @@ public class TestList {
 		// TODO using containsAll and Arrays.asList (see above),
 		// 1) assert that list contains all five different numbers added
 		// 2) assert that list does not contain all of 11, 22, and 33
-		fail("Not yet implemented"); // remove this line when done
+		Arrays.asList(list).contains(33);
+		Arrays.asList(list).contains(44);
+		Arrays.asList(list).contains(55);
+		Arrays.asList(list).contains(66);
+		Arrays.asList(list).contains(77);
+
+
+		fail();
 	}
 
 	@Test
@@ -204,7 +212,7 @@ public class TestList {
 		list.add(66);
 		// TODO fix the arguments in the subList method so that the assertion
 		// passes
-		assertEquals(Arrays.asList(44, 77, 55), list.subList(0, 0));
+		assertEquals(Arrays.asList(44, 77, 55), list.subList(2 ,5));
 	}
 
 }
