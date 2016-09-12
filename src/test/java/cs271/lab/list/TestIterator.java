@@ -21,8 +21,8 @@ public class TestIterator {
 
 	@Before
 	public void setUp() throws Exception {
-		list = new ArrayList<Integer>();
-		//list = new LinkedList<Integer>();
+		//list = new ArrayList<Integer>();
+		list = new LinkedList<Integer>();
 		// TODO also try with a LinkedList - does it make any difference? the difference is that the linked list
 		// seems to run faster in comparison to the array list, this may be because the iterator is more similiar to a linked list
 		// than the array list.
