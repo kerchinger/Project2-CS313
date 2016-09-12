@@ -119,7 +119,7 @@ public class TestList {
 		list.add(55);
 		list.add(77);
 		list.add(66);
-		// TODO using containsAll and Arrays.asList (see above),
+		// TODOdone using containsAll and Arrays.asList (see above),
 		// 1) assert that list contains all five different numbers added
 		// 2) assert that list does not contain all of 11, 22, and 33
 		Arrays.asList(list).contains(33);
@@ -127,16 +127,16 @@ public class TestList {
 		Arrays.asList(list).contains(55);
 		Arrays.asList(list).contains(66);
 		Arrays.asList(list).contains(77);
-
-
-		fail();
+		List list1 = Arrays.asList(new int [] {11,22,33});
+		assertEquals(false, list.containsAll(list1));
 	}
 
 	@Test
 	public void testAddAll() {
-		// TODO in a single statement using addAll and Arrays.asList,
+		// TODOdone in a single statement using addAll and Arrays.asList,
 		// add items to the list to make the following assertions pass
 		// (without touching the assertions themselves)
+		list.addAll(Arrays.asList(33,77,44, 77,55,77,66));
 		assertEquals(7, list.size());
 		assertEquals(33, list.get(0).intValue());
 		assertEquals(77, list.get(1).intValue());
@@ -159,6 +159,7 @@ public class TestList {
 		// TODO in a single statement using removeAll and Arrays.asList,
 		// remove items from the list to make the following assertions pass
 		// (without touching the assertions themselves)
+		list.removeAll(Arrays.asList(33,44,55,66));
 		assertEquals(3, list.size());
 		assertEquals(Arrays.asList(77, 77, 77), list);
 	}
