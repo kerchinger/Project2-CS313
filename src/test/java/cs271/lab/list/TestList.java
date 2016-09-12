@@ -6,6 +6,7 @@ import static org.junit.Assert.fail;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.junit.After;
@@ -19,7 +20,13 @@ public class TestList {
 	@Before
 	public void setUp() throws Exception {
 		list = new ArrayList<Integer>();
+		//list = new LinkedList<Integer>();
 		// TODO also try with a LinkedList - does it make any difference?
+		// based off of observations of time, the only difference was that array list took 1 ms longer to run
+		// but in reality, it depends on what the program is doing, so with this program we are doing a lot of
+		// adding removing and testing, so the functionality that makes a linked list better or worst are not being tested
+		// the difference that would make a linked list better deals with how frequnetly data is being inserted and deleted
+		// because with an array insertion and deletion is more complicated, in comparison to a linked list
 	}
 
 	@After
@@ -40,7 +47,7 @@ public class TestList {
 
 	@Test
 	public void testSizeNonEmpty() {
-		// Tododone  fix the expected values in the assertions below
+		// Todo  fix the expected values in the assertions below
 		list.add(77);
 		assertEquals(false, list.isEmpty());
 		assertEquals(1, list.size());
@@ -61,7 +68,7 @@ public class TestList {
 		list.add(77);
 		list.add(77);
 		list.add(77);
-		// TODOdone fix the expected values in the assertions below
+		// TODO fix the expected values in the assertions below
 		assertEquals(3, list.size());
 		assertEquals(0, list.indexOf(77));
 		assertEquals(77, list.get(1).intValue());
@@ -77,7 +84,7 @@ public class TestList {
 		list.add(55);
 		list.add(77);
 		list.add(66);
-		// TODOdone fix the expected values in the assertions below
+		// TODO fix the expected values in the assertions below
 		assertEquals(7, list.size());
 		assertEquals(1, list.indexOf(77));
 		assertEquals(5, list.lastIndexOf(77));
@@ -96,7 +103,7 @@ public class TestList {
 		list.add(77);
 		list.add(6);
 		list.remove(5); // what does this method do? =  removes the element at position 5
-		// TODOdone fix the expected values in the assertions below
+		// TODO fix the expected values in the assertions below
 		assertEquals(6, list.size());
 		assertEquals(1, list.indexOf(77));
 		assertEquals(3, list.lastIndexOf(77));
@@ -119,7 +126,7 @@ public class TestList {
 		list.add(55);
 		list.add(77);
 		list.add(66);
-		// TODOdone using containsAll and Arrays.asList (see above),
+		// TODO using containsAll and Arrays.asList (see above),
 		// 1) assert that list contains all five different numbers added
 		// 2) assert that list does not contain all of 11, 22, and 33
 		Arrays.asList(list).contains(33);
@@ -133,7 +140,7 @@ public class TestList {
 
 	@Test
 	public void testAddAll() {
-		// TODOdone in a single statement using addAll and Arrays.asList,
+		// TODO in a single statement using addAll and Arrays.asList,
 		// add items to the list to make the following assertions pass
 		// (without touching the assertions themselves)
 		list.addAll(Arrays.asList(33,77,44, 77,55,77,66));
@@ -176,6 +183,7 @@ public class TestList {
 		// TODO in a single statement using retainAll and Arrays.asList,
 		// remove items from the list to make the following assertions pass
 		// (without touching the assertions themselves)
+		list.retainAll(Arrays.asList(77,77,77));
 		assertEquals(3, list.size());
 		assertEquals(Arrays.asList(77, 77, 77), list);
 	}
@@ -192,6 +200,9 @@ public class TestList {
 		// TODO use the set method to change specific elements in the list
 		// such that the following assertions pass
 		// (without touching the assertions themselves)
+		list.set(1, 99);
+		list.set(3,99);
+		list.set(5, 99);
 		assertEquals(7, list.size());
 		assertEquals(33, list.get(0).intValue());
 		assertEquals(99, list.get(1).intValue());
