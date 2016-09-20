@@ -13,4 +13,5 @@
             it says the index is out of bonds because there is nothing at an index of 77.
 
         - which of the two lists performs better as the size increases?
-            Based off of the results of my graph it seems as though both perform equally as well throughout the tests.
+            Based off of the Graph, the arrayList is better at adding and removing elements, where the linked list is better at accessing the elements
+            as the size increases.
