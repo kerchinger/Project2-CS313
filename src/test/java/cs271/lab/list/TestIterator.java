@@ -52,7 +52,7 @@ public class TestIterator {
 		final Iterator<Integer> i = list.iterator();
 		assertTrue(i.hasNext());
 		assertEquals(33, i.next().intValue());
-		// TODO fix the expected values in the assertions below
+		// TODOdone fix the expected values in the assertions below
 		assertTrue(i.hasNext());
 		assertEquals(77, i.next().intValue());
 		assertTrue(i.hasNext());
@@ -80,11 +80,11 @@ public class TestIterator {
 		final Iterator<Integer> i = list.iterator();
 		while (i.hasNext()) {
 			if (i.next() == 77) {
-				i.remove(); // TODO what happens if you use list.remove(77)? the program doesn;t run, it
+				i.remove(); // TODOdone what happens if you use list.remove(77)? the program doesn;t run, it
 				// states that the index is out of bounds, because .remove(index value), there is no value at index of 77
 			}
 		}
-		// TODO using assertEquals and Arrays.asList (see above)
+		// TODOdone using assertEquals and Arrays.asList (see above)
 		// express which values are left in the list
 		assertEquals(list, Arrays.asList(33, 44, 55, 66));
 		//fail("Not yet implemented"); // remove this line when done
@@ -101,7 +101,7 @@ public class TestIterator {
 		list.add(66);
 		double sum = 0;
 		int n = 0;
-		// TODO use an iterator and a while loop to compute the average (mean) of the values
+		// TODOdone use an iterator and a while loop to compute the average (mean) of the values
 		// (defined as the sum of the items divided by the number of items)
 		final Iterator<Integer> x = list.iterator();
 		while(x.hasNext()) {

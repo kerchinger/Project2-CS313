@@ -47,7 +47,7 @@ public class TestList {
 
 	@Test
 	public void testSizeNonEmpty() {
-		// Todo  fix the expected values in the assertions below
+		// Tododone  fix the expected values in the assertions below
 		list.add(77);
 		assertEquals(false, list.isEmpty());
 		assertEquals(1, list.size());
@@ -56,7 +56,7 @@ public class TestList {
 
 	@Test
 	public void testContains() {
-		// TODO write assertions using
+		// TODOdone write assertions using
 		// list.contains(77)
 		// that hold before and after adding 77 to the list
 		list.add(77);
@@ -68,7 +68,7 @@ public class TestList {
 		list.add(77);
 		list.add(77);
 		list.add(77);
-		// TODO fix the expected values in the assertions below
+		// TODOdone fix the expected values in the assertions below
 		assertEquals(3, list.size());
 		assertEquals(0, list.indexOf(77));
 		assertEquals(77, list.get(1).intValue());
@@ -84,7 +84,7 @@ public class TestList {
 		list.add(55);
 		list.add(77);
 		list.add(66);
-		// TODO fix the expected values in the assertions below
+		// TODOdone fix the expected values in the assertions below
 		assertEquals(7, list.size());
 		assertEquals(1, list.indexOf(77));
 		assertEquals(5, list.lastIndexOf(77));
@@ -103,7 +103,7 @@ public class TestList {
 		list.add(77);
 		list.add(6);
 		list.remove(5); // what does this method do? =  removes the element at position 5
-		// TODO fix the expected values in the assertions below
+		// TODOdone fix the expected values in the assertions below
 		assertEquals(6, list.size());
 		assertEquals(1, list.indexOf(77));
 		assertEquals(3, list.lastIndexOf(77));
@@ -126,7 +126,7 @@ public class TestList {
 		list.add(55);
 		list.add(77);
 		list.add(66);
-		// TODO using containsAll and Arrays.asList (see above),
+		// TODOdone using containsAll and Arrays.asList (see above),
 		// 1) assert that list contains all five different numbers added
 		// 2) assert that list does not contain all of 11, 22, and 33
 		Arrays.asList(list).contains(33);
@@ -140,7 +140,7 @@ public class TestList {
 
 	@Test
 	public void testAddAll() {
-		// TODO in a single statement using addAll and Arrays.asList,
+		// TODOdone in a single statement using addAll and Arrays.asList,
 		// add items to the list to make the following assertions pass
 		// (without touching the assertions themselves)
 		list.addAll(Arrays.asList(33,77,44, 77,55,77,66));
@@ -163,7 +163,7 @@ public class TestList {
 		list.add(55);
 		list.add(77);
 		list.add(66);
-		// TODO in a single statement using removeAll and Arrays.asList,
+		// TODOdone in a single statement using removeAll and Arrays.asList,
 		// remove items from the list to make the following assertions pass
 		// (without touching the assertions themselves)
 		list.removeAll(Arrays.asList(33,44,55,66));
@@ -180,7 +180,7 @@ public class TestList {
 		list.add(55);
 		list.add(77);
 		list.add(66);
-		// TODO in a single statement using retainAll and Arrays.asList,
+		// TODOdone in a single statement using retainAll and Arrays.asList,
 		// remove items from the list to make the following assertions pass
 		// (without touching the assertions themselves)
 		list.retainAll(Arrays.asList(77,77,77));
@@ -197,7 +197,7 @@ public class TestList {
 		list.add(55);
 		list.add(77);
 		list.add(66);
-		// TODO use the set method to change specific elements in the list
+		// TODOdone use the set method to change specific elements in the list
 		// such that the following assertions pass
 		// (without touching the assertions themselves)
 		list.set(1, 99);
@@ -222,7 +222,7 @@ public class TestList {
 		list.add(55);
 		list.add(77);
 		list.add(66);
-		// TODO fix the arguments in the subList method so that the assertion
+		// TODOdone fix the arguments in the subList method so that the assertion
 		// passes
 		assertEquals(Arrays.asList(44, 77, 55), list.subList(2 ,5));
 	}

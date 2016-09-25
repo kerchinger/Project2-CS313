@@ -1,14 +1,17 @@
-		 -LinkedList - does it make any difference?
-		    For the TestList class: based off of observations of time, the only difference was that array list took 1 ms longer to run
-		 and for the TestIteraotr class: the linked list seems to run faster in comparison to the array list by 2 ms, this may be because the
-		 iterator is more similiar to a linked list than the array list. But in reality, it depends on what the program is doing, so with this
-		 program we are doing a lot of adding removing and testing, so the functionality that makes a linked list better or worst are not being tested.
-		 The difference that would make a linked list better deals with how frequently data is being inserted and deleted
-		 because with an array insertion and deletion is more complicated in comparison to a linked list. As we can see with the testIteraotr class
-		 the linked list insertion and deletion seems to be more effective.
+    Questions:
+		 -LinkedList (TestIterator) - does it make any difference?
+          The linked list is slower is the testEmpty and testAverageValues test of the testIterator.Java code.This is because linked
+           lists are not a defined set of values like an array list. So finding whether or not list is empty takes longer because the
+           linked list has to go and find values, vs the array list just having the prebuilt length of the list in its function. IN the
+           TestIerator performance area array lists seem to be the better choice.
 
+         -LinkedList (TestList) - does it make any difference?
+           The linked list's performance shows that it is faster at adding numbers, checking if a number is in the list, and slower at and slower at
+            setting up. This just shows that linked list takes a little more to set up because it has a node, and linker nodes. Further, it shows
+            that linked lists are advantageous for adding numbers (linked list are not bound by having only a certain number of values), and
+            checking/searching for numbers because its pretty fast in iterating through the list, which array list is also pretty fast at as well.
 
-        - what happens if you use list.remove(77)?
+         - In the TestList the perfromance of a linked list seems to be a litter better.
             The program does not run, this is because list.Remove(77) removes the value at an index of 77, so when the program runs
             it says the index is out of bonds because there is nothing at an index of 77.
 
