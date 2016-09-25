@@ -21,7 +21,7 @@ public class TestList {
 	public void setUp() throws Exception {
 		//list = new ArrayList<Integer>();
 		list = new LinkedList<Integer>();
-		// TODO also try with a LinkedList - does it make any difference?
+		// TODOdone also try with a LinkedList - does it make any difference?
 		// based off of observations of time, the only difference was that array list took 1 ms longer to run
 		// but in reality, it depends on what the program is doing, so with this program we are doing a lot of
 		// adding removing and testing, so the functionality that makes a linked list better or worst are not being tested

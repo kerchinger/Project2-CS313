@@ -10,7 +10,7 @@ import org.junit.Test;
 
 public class TestPerformance {
 
-	// TODO run test and record running times for SIZE = 10, 100, 1000, 10000
+	// TODOdone run test and record running times for SIZE = 10, 100, 1000, 10000
 	// which of the two lists performs better as the size increases?
 	private final int SIZE = 10;
 

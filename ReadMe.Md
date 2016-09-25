@@ -11,7 +11,7 @@
             that linked lists are advantageous for adding numbers (linked list are not bound by having only a certain number of values), and
             checking/searching for numbers because its pretty fast in iterating through the list, which array list is also pretty fast at as well.
 
-         - In the TestList the perfromance of a linked list seems to be a litter better.
+         - In the TestList the performance of a linked list seems to be a litter better.
             The program does not run, this is because list.Remove(77) removes the value at an index of 77, so when the program runs
             it says the index is out of bonds because there is nothing at an index of 77.
 
